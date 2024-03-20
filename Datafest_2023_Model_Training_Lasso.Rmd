@@ -1,0 +1,190 @@
+---
+title: "Datafest_2023_IGS_Model_Training"
+author: "Sitong Zhang"
+date: "2023-04-2"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Load libraries
+library(tidyverse)
+library(tidyr)
+library(ggplot2)
+library(dplyr)
+library(corrplot)
+library(data.table)
+library(randomForest)
+library(glmnet)
+
+set.seed(6)
+```
+
+```{r}
+# Load datasets
+attorneys <- read_csv("./data/data/attorneys.csv")
+attorneytimeentries <- read_csv("./data/data/attorneytimeentries.csv")
+categories <- read_csv("./data/data/categories.csv")
+clients <- read_csv("./data/data/clients.csv")
+questionposts <- read_csv("./data/data/questionposts.csv")
+questions <- read_csv("./data/data/questions.csv")
+statesites <- read_csv("./data/data/statesites.csv")
+subcategories <- read_csv("./data/data/subcategories.csv")
+```
+
+
+```{r}
+# Merge Dataset
+questions <- questions %>% rename( "ClientUno"="AskedByClientUno" )
+```
+
+```{r}
+data <- merge(clients, questions, by=c("ClientUno", "ClientUno"))
+```
+
+```{r}
+data$Age = as.numeric(data$Age)
+df1<- select(data,c( "Age","StateAbbr.x", "County", "StateName","EthnicIdentity","Gender","MaritalStatus","Veteran","Imprisoned","AnnualIncome","AskedOnUtc","Category"))
+```
+
+```{r}
+na.omit(df1)
+df2 = subset(df1, Gender!='Female,Male' & Gender!=' ' & Gender!= 'NULL' &  Gender!='Female,Male,Non-Conforming,Other' & MaritalStatus != 'NULL' & EthnicIdentity!='NULL' )
+```
+
+```{r}
+df2$StateAbbr.x <- as.factor(df2$StateAbbr.x)  
+df2$Gender <- as.factor(df2$Gender)  
+df2$MaritalStatus <- as.factor(df2$MaritalStatus)  
+df2$Veteran <- as.factor(df2$Veteran)  
+df2$County <- as.factor(df2$County)
+df2$EthnicIdentity <- as.factor(df2$EthnicIdentity)
+df2$Category <- as.factor(df2$Category)
+
+df2$Imprisoned <- as.factor(df2$Imprisoned)
+df2$AnnualIncome <- as.numeric(df2$AnnualIncome)
+```
+```{r}
+df3<-na.omit(df2)
+summary(df3)
+```
+
+
+# sorted data
+```{r}
+# Load the datasets
+clients_df <- read_csv("./data/data/clients.csv")
+questions_df <- read_csv('./data/data/questions.csv')
+categories_df <- read_csv('./data/data/categories.csv')
+
+# Merge clients with questions and then with categories
+clientsCategory <- clients_df %>%
+  inner_join(questions_df, by = c("ClientUno" = "AskedByClientUno")) %>%
+  inner_join(categories_df, by = "CategoryUno") 
+
+# Export the cleaned dataframe to CSV
+output_file_path <- "C:/Users/82722/OneDrive/桌面/Work and study/Datafest SP23/data/data/clientsCategory.csv"
+write_csv(clientsCategory, output_file_path)
+
+# Print the first few rows to verify
+print(head(clientsCategory))
+```
+
+
+```{r}
+clientsCategory <- read_csv("./data/data/clientsCategory.csv")
+clientsCategory <- select(clientsCategory, 
+                          Age, `StateAbbr.x`, County, StateName, EthnicIdentity, 
+                          Gender, MaritalStatus, Veteran, AnnualIncome, AskedOnUtc, 
+                          Category = `Category.x`)
+
+clientsCategory$Category[clientsCategory$Category == 'Juvenile'] <- 'Education'
+```
+
+```{r}
+colnames(clientsCategory)
+```
+
+```{r}
+clientsCategory$StateAbbr.x <- as.factor(clientsCategory$StateAbbr.x)  
+clientsCategory$Gender <- as.factor(clientsCategory$Gender)  
+clientsCategory$MaritalStatus <- as.factor(clientsCategory$MaritalStatus)  
+clientsCategory$Veteran <- as.factor(clientsCategory$Veteran)  
+clientsCategory$County <- as.factor(clientsCategory$County)
+clientsCategory$EthnicIdentity <- as.factor(clientsCategory$EthnicIdentity)
+clientsCategory$Category <- as.factor(clientsCategory$Category)
+```
+
+```{r}
+sample_size = floor(0.7*nrow(clientsCategory))
+
+# randomly split data in r
+picked = sample(seq_len(nrow(clientsCategory)),size = sample_size)
+train =clientsCategory[picked,]
+test =clientsCategory[-picked,]
+```
+
+```{r}
+train_x = train[, -which(names(train) == "Category")]
+#  =model.matrix(Category ~ ., train)[,-1]
+train_y = train$Category
+test_x = test[, -which(names(test) == "Category")]
+  #model.matrix(Category ~., test)[,-1]
+test_y = test$Category
+```
+
+```{r}
+# LASSO
+# Handling missing values in non-numeric columns
+for(i in seq_along(train_x)) {
+  if(is.factor(train_x[[i]])) {
+    # Using the mode (most common category) for imputation
+    mode_val <- names(sort(table(train_x[[i]]), decreasing = TRUE))[1]
+    train_x[[i]][is.na(train_x[[i]])] <- mode_val
+  }
+}
+```
+
+```{r}
+# estimate lambda using cross-validation
+set.seed(6)
+lasso.cv = cv.glmnet(data.matrix(train_x), train_y, alpha=1,family = "multinomial")
+plot(lasso.cv$lambda,lasso.cv$cvm)  
+lambda.cv = lasso.cv$lambda.min  # the minimizing lambda
+lambda.cv
+```
+
+```{r}
+#fit a lasso model on the training set
+fit.lasso = glmnet(data.matrix(train_x), train$Category, alpha=1, lambda=lambda.cv,family = "multinomial")
+pred.lasso = predict(fit.lasso, newx=data.matrix(test_x),type = "response")
+error_lasso <- mean((test$Category-pred.lasso)^2)
+error_lasso
+
+ssr = sum((test_y-pred.lasso)^2)
+sst = sum((test_y-mean(test_y))^2)
+rsquare_lasso <- 1-(ssr/sst) 
+
+coef(fit.lasso)
+```
+
+```{r}
+library(ggthemes)
+library(plotrix)
+
+predictive_probablity <- c(0.148475366 , 0.362898473 , 0.125808747,   0.033910889, 0.100585412,0.007700558, 0.021276882,0.012230489,0.187113183 )
+category_of_problem <- c("Financial", "Family & Children", "Housing & Homelessness", "Individual Rights", "Work & Employment ","Education","Health & Disability"," Income Maintenance","Other")
+#pie = pie3D(slices,labels=lbls,explode=0.1,main="Pie Chart of Categories ",color=c("#badbf4", "#fbd2d1", "#f7cac7","f8e9b9","d7b6d6","cea8f","c7b9c6","b5c499","c9e3e4"))
+# Plot Predictive Probability bar plot.
+ggplot(mapping = aes(x = category_of_problem, y =predictive_probablity)) +
+  geom_bar(stat = 'identity', fill = '#cc8198')+
+  xlab('predictive probablity')+
+  ylab('category of problem')+
+  ggtitle("Predictive Probablity from LASSO")+
+  coord_flip()+theme_few()
+```
+
