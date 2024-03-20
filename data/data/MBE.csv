@@ -1,0 +1,295 @@
+ÿStateName,StateAbbr,TotalTaking,TotalPassing,PercentPassing,year
+Alabama,AL,757,398,0.53,2016
+Arizona,AR,988,505,0.51,2016
+Arkansas,AZ,357,204,0.57,2016
+California,CA,12495,5032,0.4,2016
+Connecticut,CT,555,372,0.67,2016
+Florida,FL,4637,2515,0.54,2016
+Georgia,GA,1975,1228,0.62,2016
+Hawaii,HI,283,200,0.71,2016
+Idaho,ID,202,145,0.72,2016
+Illinois,IL,2891,1993,0.69,2016
+Indiana,IN,766,467,0.61,2016
+Iowa,IA,260,178,0.68,2016
+Kansas,KS,215,155,0.72,2016
+Louisiana,LA,944,617,0.65,2016
+Maine,ME,189,129,0.68,2016
+Maryland,MD,1868,1115,0.6,2016
+Massachusetts,MA,2384,1550,0.65,2016
+Michigan,MI,1190,779,0.65,2016
+Mississippi,MS,276,190,0.69,2016
+Missouri,MO,970,757,0.78,2016
+Nebraska,NE,219,169,0.77,2016
+New Hampshire,NH,278,189,0.68,2016
+New Jersey,NJ,2069,1196,0.58,2016
+New Mexico,NM,281,185,0.66,2016
+New York,NY,14490,8275,0.57,2016
+North Carolina,NC,1827,943,0.52,2016
+North Dakota,ND,107,62,0.58,2016
+Oklahoma,OK,446,305,0.68,2016
+Pennsylvania,PA,2200,1444,0.66,2016
+South Carolina,SC,644,404,0.63,2016
+South Dakota,SD,113,57,0.5,2016
+Tennessee,TN,1094,644,0.59,2016
+Texas,TX,4408,2904,0.66,2016
+Utah,UT,447,318,0.71,2016
+Vermont,VT,96,62,0.65,2016
+U.S. Virgin Islands,VI,40,23,0.57,2016
+Virginia,VA,1517,1038,0.68,2016
+West Virginia,WV,235,149,0.63,2016
+Wisconsin,WI,204,124,0.61,2016
+Wyoming,WY,82,57,0.7,2016
+Washington,WA,1124,748,0.67,2016
+ABA Federal,US,,,,2016
+Alabama,AL,766,397,0.52,2017
+Arizona,AR,971,484,0.5,2017
+Arkansas,AZ,345,218,0.63,2017
+California,CA,12985,5768,0.44,2017
+Connecticut,CT,544,350,0.64,2017
+Florida,FL,4415,2446,0.55,2017
+Georgia,GA,1718,1001,0.58,2017
+Hawaii,HI,274,185,0.68,2017
+Idaho,ID,192,143,0.74,2017
+Illinois,IL,2740,1885,0.69,2017
+Indiana,IN,792,485,0.61,2017
+Iowa,IA,260,204,0.78,2017
+Kansas,KS,176,132,0.75,2017
+Louisiana,LA,815,558,0.68,2017
+Maine,ME,160,101,0.63,2017
+Maryland,MD,1605,888,0.55,2017
+Massachusetts,MA,1872,1197,0.64,2017
+Michigan,MI,1094,700,0.64,2017
+Mississippi,MS,262,137,0.52,2017
+Missouri,MO,946,748,0.79,2017
+Nebraska,NE,217,161,0.74,2017
+New Hampshire,NH,234,160,0.68,2017
+New Jersey,NJ,1351,778,0.58,2017
+New Mexico,NM,308,237,0.77,2017
+New York,NY,14094,8624,0.61,2017
+North Carolina,NC,1639,858,0.52,2017
+North Dakota,ND,113,61,0.54,2017
+Oklahoma,OK,421,341,0.81,2017
+Pennsylvania,PA,1865,1263,0.68,2017
+South Carolina,SC,682,445,0.65,2017
+South Dakota,SD,115,67,0.58,2017
+Tennessee,TN,1068,644,0.58,2017
+Texas,TX,4208,2730,0.65,2017
+Utah,UT,397,302,0.76,2017
+Vermont,VT,111,65,0.59,2017
+U.S. Virgin Islands,VI,30,15,0.5,2017
+Virginia,VA,1226,811,0.66,2017
+West Virginia,WV,240,155,0.65,2017
+Wisconsin,WI,218,150,0.69,2017
+Wyoming,WY,90,57,0.63,2017
+Washington,WA,1120,758,0.68,2017
+ABA Federal,US,,,,2017
+Alabama,AL,841,391,0.46,2018
+Arizona,AR,961,505,0.53,2018
+Arkansas,AZ,308,164,0.53,2018
+California,CA,12772,4566,0.36,2018
+Connecticut,CT,522,254,0.49,2018
+Florida,FL,4204,2165,0.51,2018
+Georgia,GA,1652,878,0.53,2018
+Hawaii,HI,256,174,0.68,2018
+Idaho,ID,172,116,0.67,2018
+Illinois,IL,2682,1758,0.66,2018
+Indiana,IN,723,432,0.6,2018
+Iowa,IA,250,185,0.74,2018
+Kansas,KS,148,97,0.66,2018
+Louisiana,LA,790,524,0.66,2018
+Maine,ME,162,89,0.55,2018
+Maryland,MD,1253,643,0.51,2018
+Massachusetts,MA,1852,1141,0.62,2018
+Michigan,MI,1070,677,0.63,2018
+Mississippi,MS,269,129,0.48,2018
+Missouri,MO,883,638,0.72,2018
+Nebraska,NE,195,136,0.7,2018
+New Hampshire,NH,205,94,0.46,2018
+New Jersey,NJ,1446,778,0.54,2018
+New Mexico,NM,300,205,0.68,2018
+New York,NY,13438,7516,0.56,2018
+North Carolina,NC,1202,567,0.47,2018
+North Dakota,ND,84,49,0.58,2018
+Oklahoma,OK,363,261,0.72,2018
+Pennsylvania,PA,1808,1187,0.66,2018
+South Carolina,SC,653,395,0.6,2018
+South Dakota,SD,117,65,0.56,2018
+Tennessee,TN,900,504,0.56,2018
+Texas,TX,4068,2403,0.59,2018
+Utah,UT,358,266,0.74,2018
+Vermont,VT,117,80,0.68,2018
+U.S. Virgin Islands,VI,19,13,0.68,2018
+Virginia,VA,1104,731,0.66,2018
+West Virginia,WV,249,149,0.6,2018
+Wisconsin,WI,202,128,0.63,2018
+Wyoming,WY,84,58,0.69,2018
+Washington,WA,1006,629,0.63,2018
+ABA Federal,US,,,,2018
+Alabama,AL,782,403,0.52,2019
+Arizona,AR,828,484,0.58,2019
+Arkansas,AZ,342,196,0.57,2019
+California,CA,12404,5347,0.43,2019
+Connecticut,CT,1030,707,0.69,2019
+Florida,FL,4045,2263,0.56,2019
+Georgia,GA,1701,959,0.56,2019
+Hawaii,HI,272,170,0.63,2019
+Idaho,ID,198,126,0.64,2019
+Illinois,IL,2638,1745,0.66,2019
+Indiana,IN,697,416,0.6,2019
+Iowa,IA,262,192,0.73,2019
+Kansas,KS,149,125,0.84,2019
+Louisiana,LA,735,477,0.65,2019
+Maine,ME,175,81,0.46,2019
+Maryland,MD,1140,692,0.61,2019
+Massachusetts,MA,1875,1216,0.65,2019
+Michigan,MI,1011,604,0.6,2019
+Mississippi,MS,258,167,0.65,2019
+Missouri,MO,948,695,0.73,2019
+Nebraska,NE,200,144,0.72,2019
+New Hampshire,NH,162,90,0.56,2019
+New Jersey,NJ,1305,770,0.59,2019
+New Mexico,NM,323,219,0.68,2019
+New York,NY,14200,8380,0.59,2019
+North Carolina,NC,1303,904,0.69,2019
+North Dakota,ND,119,78,0.66,2019
+Oklahoma,OK,431,326,0.76,2019
+Pennsylvania,PA,1780,1235,0.69,2019
+South Carolina,SC,662,443,0.67,2019
+South Dakota,SD,104,78,0.75,2019
+Tennessee,TN,989,631,0.64,2019
+Texas,TX,4092,2624,0.64,2019
+Utah,UT,327,256,0.78,2019
+Vermont,VT,117,70,0.6,2019
+U.S. Virgin Islands,VI,18,8,0.44,2019
+Virginia,VA,910,650,0.71,2019
+West Virginia,WV,242,147,0.61,2019
+Wisconsin,WI,201,116,0.58,2019
+Wyoming,WY,83,55,0.66,2019
+Washington,WA,943,590,0.63,2019
+ABA Federal,US,,,,2019
+Alabama,AL,755,346,0.46,2020
+Arizona,AR,849,530,0.62,2020
+Arkansas,AZ,316,221,0.7,2020
+California,CA,12928,6420,0.5,2020
+Connecticut,CT,537,316,0.59,2020
+Florida,FL,2493,1598,0.64,2020
+Georgia,GA,1689,994,0.59,2020
+Hawaii,HI,221,151,0.68,2020
+Idaho,ID,207,131,0.63,2020
+Illinois,IL,2893,1918,0.66,2020
+Indiana,IN,757,517,0.68,2020
+Iowa,IA,222,162,0.73,2020
+Kansas,KS,174,144,0.83,2020
+Louisiana,LA,484,268,0.55,2020
+Maine,ME,185,138,0.75,2020
+Maryland,MD,1106,681,0.62,2020
+Massachusetts,MA,1752,1173,0.67,2020
+Michigan,MI,1077,719,0.67,2020
+Mississippi,MS,166,118,0.71,2020
+Missouri,MO,825,618,0.75,2020
+Nebraska,NE,219,164,0.75,2020
+New Hampshire,NH,126,86,0.68,2020
+New Jersey,NJ,1862,1136,0.61,2020
+New Mexico,NM,469,389,0.83,2020
+New York,NY,8713,5750,0.66,2020
+North Carolina,NC,1070,759,0.71,2020
+North Dakota,ND,74,54,0.73,2020
+Oklahoma,OK,378,291,0.77,2020
+Pennsylvania,PA,1758,1213,0.69,2020
+South Carolina,SC,577,383,0.66,2020
+South Dakota,SD,85,52,0.61,2020
+Tennessee,TN,964,640,0.66,2020
+Texas,TX,3145,1921,0.61,2020
+Utah,UT,138,90,0.65,2020
+Vermont,VT,156,107,0.69,2020
+U.S. Virgin Islands,VI,30,14,0.47,2020
+Virginia,VA,810,624,0.77,2020
+West Virginia,WV,230,153,0.67,2020
+Wisconsin,WI,216,129,0.6,2020
+Wyoming,WY,85,60,0.71,2020
+Washington,WA,404,216,0.53,2020
+ABA Federal,US,,,,2020
+Alabama,AL,773,369,0.48,2021
+Arizona,AR,786,489,0.62,2021
+Arkansas,AZ,323,217,0.67,2021
+California,CA,10634,5141,0.48,2021
+Connecticut,CT,563,307,0.55,2021
+Florida,FL,4472,2500,0.56,2021
+Georgia,GA,1637,945,0.58,2021
+Hawaii,HI,269,192,0.71,2021
+Idaho,ID,239,153,0.64,2021
+Illinois,IL,2658,1610,0.61,2021
+Indiana,IN,578,372,0.64,2021
+Iowa,IA,286,194,0.68,2021
+Kansas,KS,190,139,0.73,2021
+Louisiana,LA,825,532,0.64,2021
+Maine,ME,237,140,0.59,2021
+Maryland,MD,1243,751,0.6,2021
+Massachusetts,MA,1884,1258,0.67,2021
+Michigan,MI,958,566,0.59,2021
+Mississippi,MS,195,130,0.67,2021
+Missouri,MO,833,600,0.72,2021
+Nebraska,NE,225,156,0.69,2021
+New Hampshire,NH,117,72,0.62,2021
+New Jersey,NJ,1735,919,0.53,2021
+New Mexico,NM,221,157,0.71,2021
+New York,NY,11357,6845,0.6,2021
+North Carolina,NC,1252,875,0.7,2021
+North Dakota,ND,84,53,0.63,2021
+Oklahoma,OK,430,317,0.74,2021
+Pennsylvania,PA,1728,1112,0.64,2021
+South Carolina,SC,628,403,0.64,2021
+South Dakota,SD,95,67,0.71,2021
+Tennessee,TN,1026,588,0.57,2021
+Texas,TX,4311,2771,0.64,2021
+Utah,UT,306,250,0.82,2021
+Vermont,VT,172,95,0.55,2021
+U.S. Virgin Islands,VI,22,14,0.64,2021
+Virginia,VA,780,556,0.71,2021
+West Virginia,WV,196,106,0.54,2021
+Wisconsin,WI,206,124,0.6,2021
+Wyoming,WY,88,66,0.75,2021
+Washington,WA,862,616,0.71,2021
+ABA Federal,US,,,,2021
+Alabama,AL,,,,2022
+Arizona,AR,,,,2022
+Arkansas,AZ,,,,2022
+California,CA,,,,2022
+Connecticut,CT,,,,2022
+Florida,FL,,,,2022
+Georgia,GA,,,,2022
+Hawaii,HI,,,,2022
+Idaho,ID,,,,2022
+Illinois,IL,,,,2022
+Indiana,IN,,,,2022
+Iowa,IA,,,,2022
+Kansas,KS,,,,2022
+Louisiana,LA,,,,2022
+Maine,ME,,,,2022
+Maryland,MD,,,,2022
+Massachusetts,MA,,,,2022
+Michigan,MI,,,,2022
+Mississippi,MS,,,,2022
+Missouri,MO,,,,2022
+Nebraska,NE,,,,2022
+New Hampshire,NH,,,,2022
+New Jersey,NJ,,,,2022
+New Mexico,NM,,,,2022
+New York,NY,,,,2022
+North Carolina,NC,,,,2022
+North Dakota,ND,,,,2022
+Oklahoma,OK,,,,2022
+Pennsylvania,PA,,,,2022
+South Carolina,SC,,,,2022
+South Dakota,SD,,,,2022
+Tennessee,TN,,,,2022
+Texas,TX,,,,2022
+Utah,UT,,,,2022
+Vermont,VT,,,,2022
+U.S. Virgin Islands,VI,,,,2022
+Virginia,VA,,,,2022
+West Virginia,WV,,,,2022
+Wisconsin,WI,,,,2022
+Wyoming,WY,,,,2022
+Washington,WA,,,,2022
+ABA Federal,US,,,,2022
